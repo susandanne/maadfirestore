@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Createtask">
+
+
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Create Task"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <ImageView
+        android:id="@+id/cancel"
+
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_baseline_cancel_24"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/task_tilayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="36dp"
+   >
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit"
+
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:background="@drawable/black_rect_bg"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="22dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/task_et"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        android:gravity="top|left"
+        android:hint="Task Detail"
+        android:inputType="textMultiLine"
+        android:maxLength="255"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="133dp" />
+</LinearLayout>

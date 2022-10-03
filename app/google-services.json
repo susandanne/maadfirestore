@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "78329609804",
+    "project_id": "maadfirestore",
+    "storage_bucket": "maadfirestore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78329609804:android:bc2a1056efe1e7ce2bbee9",
+        "android_client_info": {
+          "package_name": "com.example.maadfirestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78329609804-t8gn4qjt138cnf3jhncm5gko8mu3hg3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVBzRU9zncVJ70-GPpCmHHU-ZMx_Gfg6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78329609804-t8gn4qjt138cnf3jhncm5gko8mu3hg3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
