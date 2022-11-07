@@ -8,7 +8,8 @@ import com.example.maadfirestore.databinding.FragmentShowlistBinding
 
 class showlistviewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val showtext1=itemView.findViewById<TextView>(R.id.showtext1)
+    public var itemName: TextView = itemView.findViewById(R.id.title)
+    public var itemAmount: TextView = itemView.findViewById(R.id.description)
 
 
 

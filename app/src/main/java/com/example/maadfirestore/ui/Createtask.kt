@@ -1,14 +1,17 @@
 package com.example.maadfirestore.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.example.maadfirestore.R
+import androidx.navigation.fragment.findNavController
 import com.example.maadfirestore.data.model.Note
 import com.example.maadfirestore.databinding.FragmentCreatetaskBinding
+import com.example.maadfirestore.utils.UiState
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,7 +23,7 @@ lateinit var binding: FragmentCreatetaskBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return if (this::binding.isInitialized) {
             binding.root
 
@@ -38,9 +41,27 @@ lateinit var binding: FragmentCreatetaskBinding
           val task = binding.taskEt.text.toString()
 
 
-      viewmodel.add(Note("","hello","high",""+System.currentTimeMillis()))
-
+      viewmodel.addnote(Note("",task,"high",""+System.currentTimeMillis()))
+          Log.i("TAG"," $task")
       }
+        viewmodel.creeteresponse.observe(viewLifecycleOwner){
+              when(it){
+                  is UiState.failure -> {
+                      Toast(it.message)
+                  }
+                  is UiState.loading -> {
+                      Toast("loading")
+                  }
+                  is UiState.success -> {
+                      Toast("success")
+                      findNavController().popBackStack()
+                  }
+              }
+        }
+
+    }
+
+    private fun Toast(message: String?) {
 
     }
 

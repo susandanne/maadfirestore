@@ -10,8 +10,8 @@
         android:label="fragment_showlist"
         tools:layout="@layout/fragment_showlist" >
         <action
-            android:id="@+id/action_showlist3_to_showdetails3"
-            app:destination="@id/showdetails3" />
+            android:id="@+id/action_showlist3_to_createtask3"
+            app:destination="@id/createtask3" />
     </fragment>
     <fragment
         android:id="@+id/showdetails3"
