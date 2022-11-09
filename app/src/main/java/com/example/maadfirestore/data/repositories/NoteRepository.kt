@@ -7,7 +7,9 @@ import com.example.maadfirestore.utils.UiState
 
 interface NoteRepository {
     fun add(note: Note)
+    fun update(note: Note)
+
 
     fun getAllTask()
-    fun delete(note: Note)
+    fun delete()
 }

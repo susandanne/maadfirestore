@@ -31,6 +31,9 @@ class NoteRepositoryImpl @Inject constructor(val database:FirebaseFirestore) : N
        _createresponse.postValue(UiState.failure(message = it.localizedMessage))
         }
     }
+
+
+
     private val _alltask=MutableLiveData<UiState<List<Note>>>()
    val alltask:LiveData<UiState<List<Note>>>
    get ()=_alltask
@@ -54,9 +57,18 @@ class NoteRepositoryImpl @Inject constructor(val database:FirebaseFirestore) : N
            }
 
 
+    override fun update(note: Note) {
 
-    override fun delete(note: Note) {
-        TODO("Not yet implemented")
+    }
+    override fun delete() {
+        val document = database.collection(constants.NOTE).document(
+        )
+
+        document.delete().addOnSuccessListener {
+//            _createresponse.postValue(UiState.success("","nice to meet you"))
+        }.addOnFailureListener {
+//            _createresponse.postValue(UiState.failure(message = it.localizedMessage))
+        }
     }
 
 }

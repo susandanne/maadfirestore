@@ -63,13 +63,21 @@ class showlist : Fragment() {
                 }
             }
         }
+
+        binding.floatingActiondelete.setOnClickListener {
+       viewModel.deletedata()
+
+        }
     }
 
     private fun recyclerview(data: List<Note>) {
-       val showlistadapter=showlistadapter(requireActivity(),data)
-       binding.noteListRecyclerview.adapter=showlistadapter
+        val showlistadapter=showlistadapter(requireActivity(),data)
+        binding.noteListRecyclerview.adapter=showlistadapter
     }
-}
+    }
+
+
+
 
 
 

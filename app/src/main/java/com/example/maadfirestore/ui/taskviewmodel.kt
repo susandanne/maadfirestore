@@ -18,5 +18,8 @@ class taskviewmodel @Inject constructor(var repositoryImpl: NoteRepositoryImpl):
 
     val alltask=repositoryImpl.alltask
 
+    fun deletedata()=repositoryImpl.delete()
+
+
 
 }
